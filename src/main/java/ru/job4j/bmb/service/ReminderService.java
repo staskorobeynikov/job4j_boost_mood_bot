@@ -1,16 +1,11 @@
-package ru.job4j.service;
+package ru.job4j.bmb.service;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.springframework.stereotype.Service;
-import ru.job4j.content.Content;
 
 @Service
-public class BotCommandHandler {
-    void receive(Content content) {
-        System.out.println(content);
-    }
-
+public class ReminderService {
     @PostConstruct
     public void init() {
         System.out.println("Bean is going through @PostConstruct init.");

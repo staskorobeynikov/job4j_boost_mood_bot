@@ -1,4 +1,4 @@
-package ru.job4j.content;
+package ru.job4j.bmb.content;
 
 public class ContentProvider {
 }

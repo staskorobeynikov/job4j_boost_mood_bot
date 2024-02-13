@@ -1,4 +1,4 @@
-package ru.job4j.exception;
+package ru.job4j.bmb.exception;
 
 public class ExceptionHandlingAspect {
 }
