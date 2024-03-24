@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
-import ru.job4j.bmb.config.AppConfig;
 import ru.job4j.bmb.content.Content;
 import ru.job4j.bmb.service.TelegramBotService;
 import ru.job4j.bmb.service.TgRemoteService;
