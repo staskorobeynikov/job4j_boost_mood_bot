@@ -87,7 +87,7 @@ public class TgRemoteService extends TelegramLongPollingBot {
         return message;
     }
 
-    InlineKeyboardButton createBtn(String name, String data) {
+    private InlineKeyboardButton createBtn(String name, String data) {
         var inline = new InlineKeyboardButton();
         inline.setText(name);
         inline.setCallbackData(data);
