@@ -1,4 +1,5 @@
 package ru.job4j.bmb.content;
 
-public class ContentProvider {
+public interface ContentProvider {
+    Content byMood(Long chatId, Long moodId);
 }
