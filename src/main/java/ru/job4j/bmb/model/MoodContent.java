@@ -1,34 +1,29 @@
 package ru.job4j.bmb.model;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 import java.util.Objects;
 
 @Entity
-@Table(name = "mb_user")
-public class User {
+@Table(name = "mb_mood_content")
+public class MoodContent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "client_id", unique = true)
-    private long clientId;
+    @ManyToOne
+    @JoinColumn(name = "mood_id")
+    private Mood mood;
 
-    @Column(name = "chat_id")
-    private long chatId;
+    private String text;
 
-    public User() {
-    }
-
-    public User(Long id, long clientId, long chatId) {
-        this.id = id;
-        this.clientId = clientId;
-        this.chatId = chatId;
+    public MoodContent() {
     }
 
     public Long getId() {
@@ -39,20 +34,20 @@ public class User {
         this.id = id;
     }
 
-    public long getClientId() {
-        return clientId;
+    public Mood getMood() {
+        return mood;
     }
 
-    public void setClientId(long clientId) {
-        this.clientId = clientId;
+    public void setMood(Mood mood) {
+        this.mood = mood;
     }
 
-    public long getChatId() {
-        return chatId;
+    public String getText() {
+        return text;
     }
 
-    public void setChatId(long chatId) {
-        this.chatId = chatId;
+    public void setText(String text) {
+        this.text = text;
     }
 
     @Override
@@ -63,12 +58,12 @@ public class User {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        User user = (User) o;
-        return Objects.equals(id, user.id);
+        MoodContent that = (MoodContent) o;
+        return Objects.equals(id, that.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hashCode(id);
     }
 }
