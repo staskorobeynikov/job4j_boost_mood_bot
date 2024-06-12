@@ -26,6 +26,11 @@ public class MoodContent {
     public MoodContent() {
     }
 
+    public MoodContent(Mood mood, String text) {
+        this.mood = mood;
+        this.text = text;
+    }
+
     public Long getId() {
         return id;
     }

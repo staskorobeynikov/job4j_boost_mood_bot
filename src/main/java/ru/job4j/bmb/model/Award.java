@@ -24,6 +24,12 @@ public class Award {
     public Award() {
     }
 
+    public Award(String title, String description, int days) {
+        this.title = title;
+        this.description = description;
+        this.days = days;
+    }
+
     public Long getId() {
         return id;
     }
