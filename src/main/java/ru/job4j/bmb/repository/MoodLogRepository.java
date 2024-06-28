@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface MoodLogRepository extends CrudRepository<MoodLog, Long> {
     List<MoodLog> findAll();
+
+    List<MoodLog> findByUserId(Long userId);
 }
